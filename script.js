@@ -1,12 +1,12 @@
 (function() {
-    const CART_KEY = 'bloom_cart_items_v1';
+    const CART_KEY = 'bloom_cart_items_v1'; // now stored in sessionStorage per Task 3.2
     const FEEDBACK_KEY = 'bloom_feedback_entries_v1';
 
     function readCart() {
-        try { return JSON.parse(localStorage.getItem(CART_KEY) || '[]'); } catch { return []; }
+        try { return JSON.parse(sessionStorage.getItem(CART_KEY) || '[]'); } catch { return []; }
     }
     function writeCart(items) {
-        localStorage.setItem(CART_KEY, JSON.stringify(items));
+        sessionStorage.setItem(CART_KEY, JSON.stringify(items));
         renderCartModal();
     }
     function addToCart(item) {
