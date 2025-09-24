@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>About • Bloom Valley Nursery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html"><img src="assets/icons/Client1_LogoPalette1_790D1D.png" alt="Bloom Valley Nursery logo"> Bloom Valley Nursery</a>
+            <nav class="site-nav" aria-label="Primary">
+                <ul id="nav-menu" class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="about.html" aria-current="page">About</a></li>
+                    <li><a href="custom.html">Services</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="section">
+            <div class="container">
+                <h1>About Bloom Valley Nursery</h1>
+                <p>Bloom Valley Nursery is a family-owned, local plant nursery passionate about connecting our community with the beauty and benefits of nature. We specialize in a wide variety of plants, trees, and gardening supplies, and are committed to sustainability, creativity, and fostering a love for horticulture among gardening enthusiasts and homeowners.</p>
+            </div>
+        </section>
+        <section class="section section-alt">
+            <div class="container">
+                <div class="grid cards">
+                    <article class="card"><img src="assets/images/Client1_WateringCan.png" alt="Watering can" style="width:64px; height:64px; object-fit:contain;"> <h3>Our Mission</h3><p>Promote healthy, local, and sustainable gardening.</p></article>
+                    <article class="card"><img src="assets/images/Client1_AppleTree.png" alt="Apple tree" style="width:64px; height:64px; object-fit:contain;"> <h3>Our Team</h3><p>Experienced horticulturists and friendly staff.</p></article>
+                    <article class="card"><img src="assets/images/Client1_PottingSoil.png" alt="Potting soil bag" style="width:64px; height:64px; object-fit:contain;"> <h3>Our Values</h3><p>Quality, education, and environmental stewardship.</p></article>
+                </div>
+            </div>
+        </section>
+        <section class="section">
+            <div class="container">
+                <h2>Hours of Operation</h2>
+                <table aria-label="Business Hours">
+                    <tbody>
+                        <tr><th>Monday – Friday</th><td>9:00 a.m. – 6:00 p.m.</td></tr>
+                        <tr><th>Saturday – Sunday</th><td>10:00 a.m. – 5:00 p.m.</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="section section-alt">
+            <div class="container">
+                <h2>Feedback / Custom Order</h2>
+                <form id="feedback-form" aria-label="Feedback form">
+                    <div class="grid form-grid">
+                        <label>
+                            <span>Name</span>
+                            <input type="text" name="name" required aria-required="true">
+                        </label>
+                        <label>
+                            <span>Email</span>
+                            <input type="email" name="email" required aria-required="true">
+                        </label>
+                        <label class="full">
+                            <span>Message / Order Details</span>
+                            <textarea name="message" rows="4" required aria-required="true"></textarea>
+                        </label>
+                    </div>
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="newsletter">
+                <h4>Join our newsletter</h4>
+                <form aria-label="Newsletter signup">
+                    <input type="email" placeholder="Your email" aria-label="Email">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="custom.html">Services</a>
+                <a href="community.html">Community</a>
+            </nav>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+            <p style="grid-column:1/-1; margin-top:8px;">© <span id="year"></span> Bloom Valley Nursery. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+

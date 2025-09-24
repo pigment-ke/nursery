@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Services • Bloom Valley Nursery</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700;800&family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+        <div class="container header-inner">
+            <a class="brand" href="index.html"><img src="assets/icons/Client1_LogoPalette1_790D1D.png" alt="Bloom Valley Nursery logo"> Bloom Valley Nursery</a>
+            <nav class="site-nav" aria-label="Primary">
+                <ul id="nav-menu" class="nav-list">
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="custom.html" aria-current="page">Services</a></li>
+                    <li><a href="community.html">Community</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main id="main">
+        <section class="section">
+            <div class="container">
+                <h1>Our Services</h1>
+                <p>At Bloom Valley Nursery, we proudly offer services to help your garden thrive. Whether you’re looking for expert landscaping, hands-on gardening workshops, or convenient local delivery, our family-owned team is here to support your horticultural journey with creativity and care.</p>
+            </div>
+        </section>
+        <section class="section section-alt">
+            <div class="container grid cards">
+                <article class="card">
+                    <img src="assets/images/Client1_MapleTree.png" alt="Landscaping service with maple tree" style="width:100%; border-radius:12px; margin-bottom:8px;">
+                    <h3>Landscaping</h3>
+                    <p>Design and installation support for home gardens.</p>
+                </article>
+                <article class="card">
+                    <img src="assets/images/Client1_AloePlant.png" alt="Gardening workshop with aloe plant" style="width:100%; border-radius:12px; margin-bottom:8px;">
+                    <h3>Workshops</h3>
+                    <p>Hands-on classes for beginners and hobbyists.</p>
+                </article>
+                <article class="card">
+                    <img src="assets/images/Client1_WateringCan.png" alt="Local delivery with watering can" style="width:100%; max-height:220px; object-fit:contain; border-radius:12px; margin-bottom:8px;">
+                    <h3>Delivery</h3>
+                    <p>Local delivery of plants and supplies.</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="newsletter">
+                <h4>Join our newsletter</h4>
+                <form aria-label="Newsletter signup">
+                    <input type="email" placeholder="Your email" aria-label="Email">
+                    <button class="btn btn-primary" type="submit">Subscribe</button>
+                </form>
+            </div>
+            <nav class="footer-nav" aria-label="Footer">
+                <a href="index.html">Home</a>
+                <a href="gallery.html">Gallery</a>
+                <a href="about.html">About</a>
+                <a href="custom.html">Services</a>
+            </nav>
+            <div class="social-links">
+                <a href="#" aria-label="Facebook">Facebook</a>
+                <a href="#" aria-label="Instagram">Instagram</a>
+                <a href="#" aria-label="Twitter">Twitter</a>
+            </div>
+            <p style="grid-column:1/-1; margin-top:8px;">© <span id="year"></span> Bloom Valley Nursery. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+    <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
+
