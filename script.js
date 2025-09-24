@@ -28,15 +28,24 @@
     function renderCartModal() {
         const items = readCart();
         const container = document.querySelector('#cart-items');
-        if (!container) return;
+        const totalEl = document.querySelector('#cart-total');
+        if (!container) {
+            // Even if the modal body isn't present, keep total in sync when possible
+            if (totalEl) {
+                const total = items.reduce((sum, it) => sum + Number(it.price || 0), 0);
+                totalEl.textContent = `$${total.toFixed(2)}`;
+            }
+            return;
+        }
         container.innerHTML = '';
         if (items.length === 0) {
             container.innerHTML = '<p>Your cart is empty.</p>';
+            if (totalEl) totalEl.textContent = '$0.00';
             return;
         }
         const list = document.createElement('ul');
         list.className = 'cart-list';
-        items.forEach((it, idx) => {
+        items.forEach((it) => {
             const li = document.createElement('li');
             li.className = 'cart-item';
             li.innerHTML = `<span>${it.name}</span><span>$${Number(it.price).toFixed(2)}</span>`;
@@ -44,7 +53,6 @@
         });
         container.appendChild(list);
         const total = items.reduce((sum, it) => sum + Number(it.price || 0), 0);
-        const totalEl = document.querySelector('#cart-total');
         if (totalEl) totalEl.textContent = `$${total.toFixed(2)}`;
     }
 
